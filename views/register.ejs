@@ -1,0 +1,29 @@
+<%- include('header') %>
+<div class="d-grid gap-2 col-6 mx-auto" >
+	<div class="card shadow-lg rounded p-3 ">
+		<h1>Register</h1>
+	<form action="/register" method="POST">
+		<fieldset>
+			<label>Username</label>
+			<input type ="text" id = 'username' name="username" placeholder="username" required>
+			<br><br>
+
+			<label>Email ID</label>
+			<input type ="email" id = 'email' name="email" placeholder="abc@example.com" required>
+			<br><br>
+
+			<label>Password</label>
+			<input type="password" id = "password" name="password" required>
+			<br><br>
+			<label>confirm Password</label>
+			
+			<input type="password" placeholder="Confirm Password" name="confirm_password" required>
+
+			<button type ="reset">Reset</button>
+			<button type ="submit">Submit</button>
+		</fieldset>
+	</form>
+	</div>
+	</div>
+	<br><br>
+

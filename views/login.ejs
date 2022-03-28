@@ -1,0 +1,37 @@
+<%- include('header') %>
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title> My Form </title>
+	<style>
+		#mylink{
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body align='center'>
+        <header>
+		
+	</header>
+	<div class="d-grid gap-2 col-6 mx-auto" >
+		<div class="card shadow-lg rounded p-3 ">
+			<h1>Login</h1>
+	<form action="/login" method="POST">
+		<fieldset>
+				
+			<label>Email ID</label>
+			<input type ="email" id = 'email' name="email" placeholder="abc@example.com" required>
+			<br><br>
+
+			<label>Password</label>
+			<input type="password" id = "password" name="password" required>
+			<br><br>
+
+			<button type ="reset">Reset</button>
+			<button type ="submit">Submit</button>
+		</fieldset>
+        </form>
+		</div>
+		</div>
+        <br><br>

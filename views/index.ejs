@@ -1,0 +1,96 @@
+<%- include('header') %>
+<body>
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+    MENU
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <li><button class="dropdown-item" type="button">ITEMS</button></li>
+    <li><button class="dropdown-item" type="button"></button></li>
+    <li><button class="dropdown-item" type="button">Something else here</button></li>
+  </ul> &nbsp;
+&nbsp; 
+<button type="button" class="btn btn-danger">COUSINIES</button>&nbsp;
+&nbsp; 
+<button type="button" class="btn btn-danger">PURE VEG</button>&nbsp;
+&nbsp; 
+<button type="button" class="btn btn-danger">NON VEG</button>
+    <br>
+    <br>
+    <div class="d-grid gap-2 col-6 mx-auto" >
+      <div class="card shadow-lg rounded p-3 ">
+  <form action="/register" method="POST"> 
+<div class="form-group">
+  <label for="title" >Restaurant Name</label>
+  <input width="2px" required  type="text" name="restname" class="form-control">
+</div>
+<br>
+<div class="form-group">
+  <label for="title" >Category</label>
+<select required name="category" id="category" >
+  <option value="Veg" >Veg</option> 
+  <option value="Non-veg">Non-veg</option>
+  </select>
+  </div>
+<br>
+<div class="form-group">
+  <label for="title" >City</label>
+  <input width="2px" required  type="text" name="city"  class="form-control">
+</div>
+
+
+  <br>
+<div class="form-group">
+  <label for="title" >state</label>
+  <input width="2px" required  type="text" name="state"  class="form-control">
+</div>
+
+<br>
+
+ 
+<br>
+<a href="/" class="btn btn-secondary">Cancel</a>
+<button type="submit" class="btn btn-primary">Add</button>
+
+<br>
+</form>
+      </div>
+      </div>
+
+      <div class="d-grid gap-2 col-8 mx-auto" >
+        <div class="card shadow-lg rounded p-3 ">
+
+
+      
+
+    
+      
+
+  <% user1.forEach(user1 => { %>
+    
+    <div class="card mt-4">
+      <div class="card-body">
+        <div class="g-col-1">
+      
+        <div><%= user1.restname%>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<%= user1.category%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= user1.city%>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<%= user1.state%></div>
+        <div  class="nav justify-content-end">
+        <a href="edit/<%= user1.id %>" class="btn btn-info">Edit</a>&nbsp;
+        <form action="<%= user1.id %>?_method=DELETE" method="POST" class="d-inline">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        
+        </form>
+      </div>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>
+
+  
+  
+
+</div>
+
+ </div>
+ </div>
+</body>
+</html>
